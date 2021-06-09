@@ -402,6 +402,8 @@ public:
     uint32_t mCameraDeviceState;
     bool mInterleaveModeEnabled;
 
+    bool mSupportingInterleave;
+
     // IMU
     IMUDevice *mIMUDevice = nullptr;
     

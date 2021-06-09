@@ -152,7 +152,6 @@ EXPORTS
 	??$<move>@AEAV<lambda_644b0c6f6f426dfd6f91480300661176>@@@@YA$$QEAV<lambda_644b0c6f6f426dfd6f91480300661176>@@AEAV0@@Z
 	??$<move>@AEAV<lambda_c26ef134520f1d4904a3b959b66e0c10>@@@@YA$$QEAV<lambda_c26ef134520f1d4904a3b959b66e0c10>@@AEAV0@@Z
 	??$<move>@AEAV<lambda_dbbb479bfc9ffc0a9f130fbf77aabe71>@@@@YA$$QEAV<lambda_dbbb479bfc9ffc0a9f130fbf77aabe71>@@AEAV0@@Z
-	??$?0PEADX@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@PEAD0AEBV?$allocator@D@1@@Z
 	??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@D@Z
 	??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z
 	??$?IW4ThreadFlags@base@libeYs3D@@@EnumFlags@base@libeYs3D@@YA?AW4ThreadFlags@12@W4312@0@Z
@@ -376,6 +375,7 @@ EXPORTS
 	??1?$shared_ptr@VPipeline@devices@libeYs3D@@@std@@QEAA@XZ
 	??1?$unique_ptr@$$BY0A@DU?$default_delete@$$BY0A@D@std@@@std@@QEAA@XZ
 	??1?$unique_ptr@VFrameProducer@video@libeYs3D@@U?$default_delete@VFrameProducer@video@libeYs3D@@@std@@@std@@QEAA@XZ
+	??1?$unique_ptr@VModeConfigOptions@@U?$default_delete@VModeConfigOptions@@@std@@@std@@QEAA@XZ
 	??1?$unique_ptr@VPCProducer@video@libeYs3D@@U?$default_delete@VPCProducer@video@libeYs3D@@@std@@@std@@QEAA@XZ
 	??1?$unique_ptr@V_Facet_base@std@@U?$default_delete@V_Facet_base@std@@@2@@std@@QEAA@XZ
 	??1?$vector@EV?$allocator@E@std@@@std@@QEAA@XZ
@@ -813,7 +813,6 @@ EXPORTS
 	?beforeTryRead@MessageChannelBase@base@libeYs3D@@IEAA?AV?$Optional@_K@23@XZ
 	?beforeTryWrite@MessageChannelBase@base@libeYs3D@@IEAA?AV?$Optional@_K@23@XZ
 	?beforeWrite@MessageChannelBase@base@libeYs3D@@IEAA_KXZ
-	?c_str@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEBAPEBDXZ
 	?calculateDepthAccuracyInfo@DepthFrameProducer@video@libeYs3D@@AEAAXPEAVFrame@23@@Z
 	?calculateDepthSpatialNoise@DepthFrameProducer@video@libeYs3D@@AEAAXPEAVFrame@23@@Z
 	?calculateDepthTemporalNoise@DepthFrameProducer@video@libeYs3D@@AEAAXPEAVFrame@23@@Z
@@ -1001,6 +1000,7 @@ EXPORTS
 	?getRegionRatio@DepthAccuracyOptions@devices@libeYs3D@@QEAAMXZ
 	?getRegisterReadWriteOptions@CameraDevice@devices@libeYs3D@@UEAA?AVRegisterReadWriteOptions@23@XZ
 	?getSDKHomePath@EYS3DSystem@libeYs3D@@QEAAPEBDXZ
+	?getSensorRegister@CameraDevice@devices@libeYs3D@@QEAAGGW4SENSORMODE_INFO@@H@Z
 	?getSerialNumber@IMUDevice@devices@libeYs3D@@UEAAPEBDXZ
 	?getStatus@IMUDevice@devices@libeYs3D@@UEAAHXZ
 	?getSupportDataFormat@IMUDevice8062@devices@libeYs3D@@MEAA?AV?$vector@W4IMU_DATA_FORMAT@IMUDevice@devices@libeYs3D@@V?$allocator@W4IMU_DATA_FORMAT@IMUDevice@devices@libeYs3D@@@std@@@std@@XZ
@@ -1073,10 +1073,6 @@ EXPORTS
 	?isIMUDeviceSupported@CameraDevice@devices@libeYs3D@@UEAA_NXZ
 	?isInterleaveModeEnabled@CameraDevice@devices@libeYs3D@@UEAA_NXZ
 	?isInterleaveModeSupported@CameraDevice8036@devices@libeYs3D@@UEAA_NXZ
-	?isInterleaveModeSupported@CameraDevice8052@devices@libeYs3D@@UEAA_NXZ
-	?isInterleaveModeSupported@CameraDevice8053@devices@libeYs3D@@UEAA_NXZ
-	?isInterleaveModeSupported@CameraDevice8059@devices@libeYs3D@@UEAA_NXZ
-	?isInterleaveModeSupported@CameraDevice8062@devices@libeYs3D@@UEAA_NXZ
 	?isInterleaveModeSupported@CameraDevice@devices@libeYs3D@@UEAA_NXZ
 	?isPlyFilterSupported@CameraDevice@devices@libeYs3D@@UEAA_NXZ
 	?isStopped@MessageChannelBase@base@libeYs3D@@QEBA_NXZ
@@ -1224,6 +1220,7 @@ EXPORTS
 	?setRegionRatio@DepthAccuracyOptions@devices@libeYs3D@@QEAAXM@Z
 	?setRegisterReadWriteOptionsForRead@CameraDevice@devices@libeYs3D@@UEAAXVRegisterReadWriteOptions@23@@Z
 	?setRegisterReadWriteOptionsForWrite@CameraDevice@devices@libeYs3D@@UEAAXVRegisterReadWriteOptions@23@@Z
+	?setSensorRegister@CameraDevice@devices@libeYs3D@@QEAAHGGW4SENSORMODE_INFO@@H@Z
 	?setSerialNumber@IMUDevice@devices@libeYs3D@@UEAAXPEBD@Z
 	?setSigma@DepthFilterOptions@devices@libeYs3D@@QEAAXM@Z
 	?setSubSampleFactor@DepthFilterOptions@devices@libeYs3D@@QEAAXH@Z
