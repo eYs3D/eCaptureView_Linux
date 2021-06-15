@@ -25,7 +25,7 @@ typedef struct {
 
 extern "C" {
 #ifdef WIN32
-CameraOpenConfig get_mode_config_by_pif(int mode_index);
+CameraOpenConfig get_mode_config_by_pif(int pif);
 #endif
 
 int get_depth_frame(BYTE* dataInOut, size_t bufInSize, int type);
