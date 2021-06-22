@@ -80,8 +80,7 @@ public:
     virtual void pauseCallback();
     virtual void enablePCCallback();
     virtual void pausePCCallback();
-    //virtual uint16_t getDepth(const libeYs3D::video::Frame *frame, int x, int y) ;
-    //virtual uint16_t getZValue(const Frame *frame, uint16_t depth) ;
+    
     void dumpFrameInfo(int frameCount = 60);
     void doSnapshot();
 

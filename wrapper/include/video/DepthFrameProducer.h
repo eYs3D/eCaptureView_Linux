@@ -48,8 +48,6 @@ public:
     virtual const char* getName() override    { return "DepthFrameProducer"; }
     virtual ~DepthFrameProducer() {}
 
-    //virtual uint16_t getDepth(const libeYs3D::video::Frame *frame, int x, int y) override;
-    //virtual uint16_t getZValue(const Frame *frame, uint16_t depth) override;
 protected:
     DepthFrameProducer(CameraDevice *cameraDevice);
 

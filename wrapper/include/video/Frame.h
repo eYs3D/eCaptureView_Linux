@@ -20,6 +20,7 @@
 #include "sensors/SensorData.h"
 #include "base/synchronization/Lock.h"
 #include "GeneralFrame.h"
+#include "video/video.h"
 
 #include <cstdint>                // for uint8_t, uint32_t, uint64_t
 #include <vector>                 // for vector
@@ -40,8 +41,9 @@ public:
     int32_t height;
     uint64_t actualDataBufferSize;  // the actual buffer size getting from device
     uint64_t dataBufferSize;        // the data length of dataVec
-
-	libeYs3D::devices::CameraDevice *mCameraDevice;
+    uint16_t nDevType;
+    int32_t nZDTableSize;// = ETronDI_ZD_TABLE_FILE_SIZE_11_BITS;
+    std::vector<uint8_t> nZDTable;
     uint16_t getDepth( int x, int y) const;
     uint16_t getZValue(uint16_t depth) const;
     
@@ -101,14 +103,12 @@ public:
     } extra;
 
     // Allocates the space with capacity |cap| and sets each element to |val|
-    Frame(libeYs3D::devices::CameraDevice * cameraDevice = nullptr,
-    	  uint64_t dataBufferSize = 0, uint8_t initDataVal = 0,
+    Frame(uint64_t dataBufferSize = 0, uint8_t initDataVal = 0,
           uint64_t zdDepthBufferSize = 0, uint16_t initZDDepthVal = 0,
           uint64_t rgbBufferSize = 0, uint8_t initRGBVal = 0);
     
 #ifdef DEVICE_MEMORY_ALLOCATOR
-    Frame(libeYs3D::devices::CameraDevice * cameraDevice,
-    	  uint64_t dataBufferSize, uint64_t rgbBufferSize, uint8_t val,
+    Frame(uint64_t dataBufferSize, uint64_t rgbBufferSize, uint8_t val,
           libeYs3D::devices::MemoryAllocator<uint8_t> &allocator);
 #endif
 

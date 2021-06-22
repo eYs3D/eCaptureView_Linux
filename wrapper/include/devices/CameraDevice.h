@@ -312,10 +312,6 @@ public:
 
     FocalLength GetFocalLength() { return m_FocalLength; }
 	void UpdateFocalLength();
-    
-    //uint16_t getDepth(const libeYs3D::video::Frame *frame, int x, int y);
-    //uint16_t getZValue(const libeYs3D::video::Frame *frame, uint16_t depth);
-    
 
 protected:
     explicit CameraDevice(DEVSELINFO *devSelInfo, DEVINFORMATION *deviceInfo);
