@@ -146,6 +146,8 @@ EXPORTS
 	?updateDepthHandle@@3PEAXEA 	 DATA
 	?updateDepthHandle@devices@libeYs3D@@3PEAXEA 	 DATA
 	?updatePCHandle@@3PEAXEA 	 DATA
+	?useInterleaveMode@@3_NA 	 DATA
+	?used_pif@@3HA 	 DATA
 	?zdTable@@3PEAGEA 	 DATA
 	ProductID 	 DATA
 	VendorID 	 DATA
@@ -1326,9 +1328,11 @@ EXPORTS
 	getDefaultZFar
 	getDefaultZNear
 	get_color_frame
+	get_config
 	get_depth_by_coordinate
 	get_depth_frame
 	get_mode_config_by_pif
+	get_pif
 	hid_close
 	hid_enumerate
 	hid_error
