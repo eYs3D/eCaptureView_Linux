@@ -210,7 +210,6 @@ EXPORTS
 	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@AEBV01@@Z
 	??0?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@H@Z
 	??0?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@H@Z
-	??0?$function@$$A6A_NPEBUSensorData@sensors@libeYs3D@@@Z@std@@QEAA@AEBV01@@Z
 	??0?$vector@EV?$allocator@E@std@@@std@@QEAA@AEBV01@@Z
 	??0?$vector@EV?$allocator@E@std@@@std@@QEAA@_KAEBEAEBV?$allocator@E@1@@Z
 	??0?$vector@EV?$allocator@E@std@@@std@@QEAA@_KAEBV?$allocator@E@1@@Z
@@ -415,6 +414,7 @@ EXPORTS
 	??C?$Optional@VFrame@video@libeYs3D@@@base@libeYs3D@@QEAAPEAVFrame@video@2@XZ
 	??D?$Optional@USensorDataSet@sensors@libeYs3D@@@base@libeYs3D@@QEAAAEAUSensorDataSet@sensors@2@XZ
 	??D?$Optional@VFrame@video@libeYs3D@@@base@libeYs3D@@QEAAAEAVFrame@video@2@XZ
+	??D?$Optional@_K@base@libeYs3D@@QEBAAEB_KXZ
 	??E?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBU?$pair@GG@std@@V?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@2@@std@@@std@@@std@@@std@@QEAAAEAV01@XZ
 	??E?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBUDeviceSellectInfo@libeYs3D@@V?$shared_ptr@VCameraDevice@devices@libeYs3D@@@std@@@std@@@std@@@std@@@std@@QEAAAEAV01@XZ
 	??E?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBW4IMUPacketSymbol@IMUData@@_K@std@@@std@@@std@@@std@@QEAAAEAV01@XZ
@@ -698,7 +698,6 @@ EXPORTS
 	?_Xlength@?$vector@V?$Optional@V?$WorkerThread@V?$Optional@VDACalculateWorkItem@video@libeYs3D@@@base@libeYs3D@@@base@libeYs3D@@@base@libeYs3D@@V?$allocator@V?$Optional@V?$WorkerThread@V?$Optional@VDACalculateWorkItem@video@libeYs3D@@@base@libeYs3D@@@base@libeYs3D@@@base@libeYs3D@@@std@@@std@@CAXXZ
 	?_Xlength@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@CAXXZ
 	?_Xlength@?$vector@W4IMU_DATA_FORMAT@IMUDevice@devices@libeYs3D@@V?$allocator@W4IMU_DATA_FORMAT@IMUDevice@devices@libeYs3D@@@std@@@std@@CAXXZ
-	?_Xrange@?$vector@HV?$allocator@H@std@@@std@@CAXXZ
 	?__enableColorStream@CameraDevice@devices@libeYs3D@@IEAAXXZ
 	?__enableDepthStream@CameraDevice@devices@libeYs3D@@IEAAXXZ
 	?__enableIMUStream@CameraDevice@devices@libeYs3D@@IEAAXXZ

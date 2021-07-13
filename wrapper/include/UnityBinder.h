@@ -9,6 +9,7 @@
 #include "EYS3DSystem.h"
 #include "devices/CameraDevice.h"
 #include "devices/model/CameraDeviceProperties.h"
+#include "devices/model/IRProperty.h"
 #include "video/Frame.h"
 #include "debug.h"
 #include "PlyWriter.h"
@@ -35,7 +36,10 @@ bool regenerate_palette(unsigned short zMin, unsigned short zFar);
 void reset_palette();
 unsigned short getDefaultZNear();
 unsigned short getDefaultZFar();
-int setupIR(unsigned short value);
+//int setupIR(unsigned short value);
+int setupIR(uint16_t value);
+uint16_t getIRValue();
+bool enableExtendIR(bool enabled);
 int init_device(void);
 int open_device(CameraOpenConfig config);
 int get_color_frame(BYTE* imageInOut);

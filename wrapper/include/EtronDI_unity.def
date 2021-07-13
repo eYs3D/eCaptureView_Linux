@@ -233,6 +233,7 @@ EXPORTS
 	??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAEAV?$basic_istream@DU?$char_traits@D@std@@@0@$$QEAV10@AEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@D@Z
 	??$string_format@$$V@Debug@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV12@@Z
 	??$string_format@G@Debug@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV12@G@Z
+	??$string_format@HHHHHHHW4DEPTH_RAW_DATA_TYPE@video@libeYs3D@@W4123@W4123@W4123@@Debug@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV12@HHHHHHHW4DEPTH_RAW_DATA_TYPE@video@libeYs3D@@111@Z
 	??$string_format@PEBD@Debug@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV12@PEBD@Z
 	??$string_format@PEBDPEAD@Debug@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV12@PEBDPEAD@Z
 	??$use_facet@V?$codecvt@DDU_Mbstatet@@@std@@@std@@YAAEBV?$codecvt@DDU_Mbstatet@@@0@AEBVlocale@0@@Z
@@ -463,6 +464,7 @@ EXPORTS
 	??C?$Optional@VFrame@video@libeYs3D@@@base@libeYs3D@@QEAAPEAVFrame@video@2@XZ
 	??D?$Optional@USensorDataSet@sensors@libeYs3D@@@base@libeYs3D@@QEAAAEAUSensorDataSet@sensors@2@XZ
 	??D?$Optional@VFrame@video@libeYs3D@@@base@libeYs3D@@QEAAAEAVFrame@video@2@XZ
+	??D?$Optional@_K@base@libeYs3D@@QEBAAEB_KXZ
 	??E?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBU?$pair@GG@std@@V?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@2@@std@@@std@@@std@@@std@@QEAAAEAV01@XZ
 	??E?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBUDeviceSellectInfo@libeYs3D@@V?$shared_ptr@VCameraDevice@devices@libeYs3D@@@std@@@std@@@std@@@std@@@std@@QEAAAEAV01@XZ
 	??E?$_Tree_const_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBW4IMUPacketSymbol@IMUData@@_K@std@@@std@@@std@@@std@@QEAAAEAV01@XZ
@@ -560,6 +562,7 @@ EXPORTS
 	?_Change_array@?$vector@UCommand@?$WorkerThread@V?$Optional@VCallbackWorkItem@video@libeYs3D@@@base@libeYs3D@@@base@libeYs3D@@V?$allocator@UCommand@?$WorkerThread@V?$Optional@VCallbackWorkItem@video@libeYs3D@@@base@libeYs3D@@@base@libeYs3D@@@std@@@std@@AEAAXQEAUCommand@?$WorkerThread@V?$Optional@VCallbackWorkItem@video@libeYs3D@@@base@libeYs3D@@@base@libeYs3D@@_K1@Z
 	?_Change_array@?$vector@UCommand@?$WorkerThread@V?$Optional@VDACalculateWorkItem@video@libeYs3D@@@base@libeYs3D@@@base@libeYs3D@@V?$allocator@UCommand@?$WorkerThread@V?$Optional@VDACalculateWorkItem@video@libeYs3D@@@base@libeYs3D@@@base@libeYs3D@@@std@@@std@@AEAAXQEAUCommand@?$WorkerThread@V?$Optional@VDACalculateWorkItem@video@libeYs3D@@@base@libeYs3D@@@base@libeYs3D@@_K1@Z
 	?_Change_array@?$vector@UtagETRONDI_STREAM_INFO@@V?$allocator@UtagETRONDI_STREAM_INFO@@@std@@@std@@AEAAXQEAUtagETRONDI_STREAM_INFO@@_K1@Z
+	?_Construct@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAXQEAD0Urandom_access_iterator_tag@2@@Z
 	?_Copy@?$_Func_impl_no_alloc@P6A_NPEBVFrame@video@libeYs3D@@@Z_NPEBV123@@std@@EEBAPEAV?$_Func_base@_NPEBVFrame@video@libeYs3D@@@2@PEAX@Z
 	?_Copy@?$_Func_impl_no_alloc@P6A_NPEBVPCFrame@video@libeYs3D@@@Z_NPEBV123@@std@@EEBAPEAV?$_Func_base@_NPEBVPCFrame@video@libeYs3D@@@2@PEAX@Z
 	?_Copy@?$_Func_impl_no_alloc@V<lambda_488c629a0a7c1ecc954ac8047e960599>@@_J$$V@std@@EEBAPEAV?$_Func_base@_J$$V@2@PEAX@Z
@@ -1323,10 +1326,12 @@ EXPORTS
 	__local_stdio_printf_options
 	__local_stdio_scanf_options
 	close_device
+	enableExtendIR
 	fprintf
 	generate_point_cloud_gpu
 	getDefaultZFar
 	getDefaultZNear
+	getIRValue
 	get_color_frame
 	get_config
 	get_depth_by_coordinate
