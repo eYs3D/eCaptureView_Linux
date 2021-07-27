@@ -36,7 +36,7 @@ public:
     
     virtual bool isInterleaveModeSupported() override;
     
-    virtual bool isIMUDeviceSupported() override   { return true; }
+    virtual bool isIMUDeviceSupported() override   { return false; }
 
     virtual ~CameraDevice8059() = default;
 

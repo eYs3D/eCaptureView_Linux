@@ -26,6 +26,7 @@ typedef struct {
 
 extern "C" {
 #ifdef WIN32
+int TransformDepthDataType(int depth_raw_data_type , int bRectifyMode , unsigned short wPID , int depthHeight);
 CameraOpenConfig get_mode_config_by_pif(int pif);
 int get_pif();
 CameraOpenConfig get_config();
@@ -41,7 +42,7 @@ int setupIR(uint16_t value);
 uint16_t getIRValue();
 bool enableExtendIR(bool enabled);
 int init_device(void);
-int open_device(CameraOpenConfig config);
+int open_device(CameraOpenConfig config, bool is_point_cloud);
 int get_color_frame(BYTE* imageInOut);
 void close_device(void);
 void release_device(void);

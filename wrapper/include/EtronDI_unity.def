@@ -137,7 +137,7 @@ EXPORTS
 	?tmpDepthSerialNumber@devices@libeYs3D@@3HA 	 DATA
 	?tmpDepthSize@devices@libeYs3D@@3HA 	 DATA
 	?tmpDepthWidth@devices@libeYs3D@@3HA 	 DATA
-	?unity_depth_raw_data_type@@3W4DEPTH_RAW_DATA_TYPE@video@libeYs3D@@A 	 DATA
+	?unity_depth_raw_data_type@@3HA 	 DATA
 	?unity_device@@3V?$shared_ptr@VCameraDevice@devices@libeYs3D@@@std@@A 	 DATA
 	?unity_eYs3DSystem@@3V?$shared_ptr@VEYS3DSystem@libeYs3D@@@std@@A 	 DATA
 	?unity_mode_config@@3UMODE_CONFIG@ModeConfig@@A 	 DATA
@@ -233,7 +233,7 @@ EXPORTS
 	??$getline@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@YAAEAV?$basic_istream@DU?$char_traits@D@std@@@0@$$QEAV10@AEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@D@Z
 	??$string_format@$$V@Debug@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV12@@Z
 	??$string_format@G@Debug@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV12@G@Z
-	??$string_format@HHHHHHHW4DEPTH_RAW_DATA_TYPE@video@libeYs3D@@W4123@W4123@W4123@@Debug@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV12@HHHHHHHW4DEPTH_RAW_DATA_TYPE@video@libeYs3D@@111@Z
+	??$string_format@HHHHHHHHW4DEPTH_RAW_DATA_TYPE@video@libeYs3D@@W4123@W4123@@Debug@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV12@HHHHHHHHW4DEPTH_RAW_DATA_TYPE@video@libeYs3D@@11@Z
 	??$string_format@PEBD@Debug@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV12@PEBD@Z
 	??$string_format@PEBDPEAD@Debug@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV12@PEBDPEAD@Z
 	??$use_facet@V?$codecvt@DDU_Mbstatet@@@std@@@std@@YAAEBV?$codecvt@DDU_Mbstatet@@@0@AEBVlocale@0@@Z
@@ -1323,6 +1323,7 @@ EXPORTS
 	?xsputn@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAA_JPEBD_J@Z
 	?yield@Thread@base@libeYs3D@@SAXXZ
 	RegisterDebugCallback
+	TransformDepthDataType
 	__local_stdio_printf_options
 	__local_stdio_scanf_options
 	close_device
