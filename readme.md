@@ -3,9 +3,10 @@
 Please type below command:
 ```sh 
 cd bin/
-sh run_DMPreview.sh
+./run_eCapture.sh
 ```
-![lllll-2](https://user-images.githubusercontent.com/13328289/121321429-aba8fa00-c940-11eb-991f-f05af39754df.png)
+![run_ecapture](https://user-images.githubusercontent.com/13328289/127975517-cd48a746-c4fe-4a8d-95b1-b9ceb90d0c80.png)
+
 
 ![lllll-1](https://user-images.githubusercontent.com/13328289/121321811-02aecf00-c941-11eb-94c0-0ae759fbf5f1.png)
 
