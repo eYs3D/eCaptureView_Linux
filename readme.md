@@ -1,4 +1,8 @@
 #   eCaptureView_Linux
+##  Prerequisites
+To start using the eCapture on Ubuntu 18.04, you will need to install the following dependencies on your system:
+- sudo apt-get install qtmultimedia5-dev libqt5multimediawidgets5 libqt5multimedia5-plugins libqt5multimedia5
+- sudo apt-get install gstreamer1.0-libav
 ##  How to run application
 Please type below command:
 ```sh 
