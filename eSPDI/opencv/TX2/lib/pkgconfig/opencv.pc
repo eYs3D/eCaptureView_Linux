@@ -1,6 +1,6 @@
 # Package Information for pkg-config
 
-prefix=/home/ethan/workspace/git/linux_sdk_master_git/EtronSDK_Linux2/3rdparty_source_code/opencv-3.4.2/release/arm_64-1
+prefix=/home/ethan/workspace/git/linux_sdk_master_git/APCSDK_Linux2/3rdparty_source_code/opencv-3.4.2/release/arm_64-1
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir_old=${prefix}/include/opencv
