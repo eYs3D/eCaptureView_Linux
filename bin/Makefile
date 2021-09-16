@@ -12,7 +12,7 @@ MAKEFILE      = Makefile
 
 CC            = gcc
 CXX           = g++
-DEFINES       = -DQT_DEPRECATED_WARNINGS -DUAC_X86_SUPPORTED -DVERSION_STRING=\"1.0.10.20210907_alpha\" -DQT_NO_DEBUG -DQT_MULTIMEDIAWIDGETS_LIB -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_DBUS_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB
+DEFINES       = -DQT_DEPRECATED_WARNINGS -DUAC_X86_SUPPORTED -DVERSION_STRING=\"1.0.11.20210914_alpha\" -DQT_NO_DEBUG -DQT_MULTIMEDIAWIDGETS_LIB -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_DBUS_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -O2 -std=gnu++11 -Wall -W -Wno-unused-parameter -Wno-reorder -D_REENTRANT -fPIC $(DEFINES)
 INCPATH       = -I../../../DMPreview -I. -I/home/stephan/github/HD-DM-Linux-SDK/DMPreview/model/ -I/home/stephan/github/HD-DM-Linux-SDK/DMPreview/model/module/ -I../../view -I../../controller -I../../manager -I../../utility -I../../utility/sqlite3 -I../../../eSPDI -I../../../wrapper/include -I../../../wrapper/include/DMPreview_utility -I../../../wrapper/include/devices -I../../../wrapper/include/devices/controller -I../../../wrapper/include/devices/model -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtDBus -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
@@ -34,8 +34,8 @@ DEL_DIR       = rmdir
 MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
-DISTNAME      = eCapture1.0.10.20210907_alpha
-DISTDIR = /home/stephan/github/HD-DM-Linux-SDK/DMPreview/build_bin/build/.tmp/eCapture1.0.10.20210907_alpha
+DISTNAME      = eCapture1.0.11.20210914_alpha
+DISTDIR = /home/stephan/github/HD-DM-Linux-SDK/DMPreview/build_bin/build/.tmp/eCapture1.0.11.20210914_alpha
 LINK          = g++
 LFLAGS        = -g3 -Wl,-rpath,'$$ORIGIN/../eSPDI' -Wl,-O1 -Wl,-rpath-link,/usr/lib/x86_64-linux-gnu
 LIBS          = $(SUBLIBS) -L/home/stephan/github/HD-DM-Linux-SDK/DMPreview/../wrapper/x86_64/lib/release/ -leys3d -L/home/stephan/github/HD-DM-Linux-SDK/DMPreview/../eSPDI -leSPDI_X86_64 -lrt -lm -ldl -lX11 -ludev -lusb-1.0 -lQt5MultimediaWidgets -lpulse-mainloop-glib -lpulse -lglib-2.0 -lQt5Multimedia -lQt5Widgets -lQt5Gui -lQt5DBus -lQt5Network -lQt5Core -lGL -lpthread 
@@ -889,7 +889,53 @@ moc_CPaintWidget.cpp: ../../view/CPaintWidget.h \
 		/usr/lib/qt5/bin/moc
 	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/stephan/github/HD-DM-Linux-SDK/DMPreview -I/home/stephan/github/HD-DM-Linux-SDK/DMPreview/model -I/home/stephan/github/HD-DM-Linux-SDK/DMPreview/model/module -I/home/stephan/github/HD-DM-Linux-SDK/DMPreview/view -I/home/stephan/github/HD-DM-Linux-SDK/DMPreview/controller -I/home/stephan/github/HD-DM-Linux-SDK/DMPreview/manager -I/home/stephan/github/HD-DM-Linux-SDK/DMPreview/utility -I/home/stephan/github/HD-DM-Linux-SDK/DMPreview/utility/sqlite3 -I/home/stephan/github/HD-DM-Linux-SDK/eSPDI -I/home/stephan/github/HD-DM-Linux-SDK/wrapper/include -I/home/stephan/github/HD-DM-Linux-SDK/wrapper/include/DMPreview_utility -I/home/stephan/github/HD-DM-Linux-SDK/wrapper/include/devices -I/home/stephan/github/HD-DM-Linux-SDK/wrapper/include/devices/controller -I/home/stephan/github/HD-DM-Linux-SDK/wrapper/include/devices/model -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtMultimedia -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtDBus -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../../view/CPaintWidget.h -o moc_CPaintWidget.cpp
 
-moc_CTitleBarWidget.cpp: ../../view/CTitleBarWidget.h \
+moc_CTitleBarWidget.cpp: ../../manager/CAPCDeviceManager.h \
+		../../../wrapper/include/devices/CameraDevice.h \
+		../../../wrapper/include/EYS3DSystem.h \
+		../../../eSPDI/eSPDI.h \
+		../../../eSPDI/eSPDI_def.h \
+		../../../eSPDI/eSPDI_version.h \
+		../../utility/hidapi/hidapi.h \
+		../../../wrapper/include/devices/MemoryAllocator.h \
+		../../../wrapper/include/debug.h \
+		../../../wrapper/include/devices/IMUDevice.h \
+		../../../wrapper/include/sensors/SensorDataProducer.h \
+		../../../wrapper/include/sensors/SensorData.h \
+		../../../wrapper/include/DMPreview_utility/IMUData.h \
+		../../../wrapper/include/base/threads/Thread.h \
+		../../../wrapper/include/base/Compiler.h \
+		../../../wrapper/include/base/threads/Types.h \
+		../../../wrapper/include/base/EnumFlags.h \
+		../../../wrapper/include/base/synchronization/Lock.h \
+		../../../wrapper/include/base/threads/ThreadPool.h \
+		../../../wrapper/include/utils.h \
+		../../../wrapper/include/base/Optional.h \
+		../../../wrapper/include/base/TypeTraits.h \
+		../../utility \
+		../../../wrapper/include/base/threads/WorkerThread.h \
+		../../../wrapper/include/base/synchronization/ConditionVariable.h \
+		../../../wrapper/include/base/threads/FunctorThread.h \
+		../../../wrapper/include/base/synchronization/MessageChannel.h \
+		../../../wrapper/include/devices/controller/RegisterReadWriteController.h \
+		../../../wrapper/include/devices/model/RegisterReadWriteOptions.h \
+		../../../wrapper/include/devices/model/DepthFilterOptions.h \
+		../../../wrapper/include/devices/model/DepthAccuracyOptions.h \
+		../../../wrapper/include/devices/model/CameraDeviceProperties.h \
+		../../../wrapper/include/devices/model/IRProperty.h \
+		../../../wrapper/include/DMPreview_utility/ModeConfigOptions.h \
+		../../../wrapper/include/DMPreview_utility/ModeConfig.h \
+		../../../wrapper/include/video/video.h \
+		../../../wrapper/include/video/FrameProducer.h \
+		../../../wrapper/include/video/Producer.h \
+		../../../wrapper/include/video/Frame.h \
+		../../../wrapper/include/video/GeneralFrame.h \
+		../../../wrapper/include/video/PCProducer.h \
+		../../../wrapper/include/video/PCFrame.h \
+		../../../wrapper/include/video/DepthFrameProducer.h \
+		../../../wrapper/include/Constants.h \
+		../../../wrapper/include/DMPreview_utility/ColorPaletteGenerator.h \
+		../../../wrapper/include/DMPreview_utility/PlyWriter.h \
+		../../view/CTitleBarWidget.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
 	/usr/lib/qt5/bin/moc $(DEFINES) --include ./moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/stephan/github/HD-DM-Linux-SDK/DMPreview -I/home/stephan/github/HD-DM-Linux-SDK/DMPreview/model -I/home/stephan/github/HD-DM-Linux-SDK/DMPreview/model/module -I/home/stephan/github/HD-DM-Linux-SDK/DMPreview/view -I/home/stephan/github/HD-DM-Linux-SDK/DMPreview/controller -I/home/stephan/github/HD-DM-Linux-SDK/DMPreview/manager -I/home/stephan/github/HD-DM-Linux-SDK/DMPreview/utility -I/home/stephan/github/HD-DM-Linux-SDK/DMPreview/utility/sqlite3 -I/home/stephan/github/HD-DM-Linux-SDK/eSPDI -I/home/stephan/github/HD-DM-Linux-SDK/wrapper/include -I/home/stephan/github/HD-DM-Linux-SDK/wrapper/include/DMPreview_utility -I/home/stephan/github/HD-DM-Linux-SDK/wrapper/include/devices -I/home/stephan/github/HD-DM-Linux-SDK/wrapper/include/devices/controller -I/home/stephan/github/HD-DM-Linux-SDK/wrapper/include/devices/model -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtMultimedia -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtDBus -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../../view/CTitleBarWidget.h -o moc_CTitleBarWidget.cpp
@@ -1899,7 +1945,6 @@ CIMUCalibration.o: ../../utility/IMU/IMU_Calibration/CIMUCalibration.cpp ../../u
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o CIMUCalibration.o ../../utility/IMU/IMU_Calibration/CIMUCalibration.cpp
 
 CTitleBarWidget.o: ../../view/CTitleBarWidget.cpp ../../view/CTitleBarWidget.h \
-		ui_CTitleBarWidget.h \
 		../../manager/CAPCDeviceManager.h \
 		../../../wrapper/include/devices/CameraDevice.h \
 		../../../wrapper/include/EYS3DSystem.h \
@@ -1945,7 +1990,8 @@ CTitleBarWidget.o: ../../view/CTitleBarWidget.cpp ../../view/CTitleBarWidget.h \
 		../../../wrapper/include/video/DepthFrameProducer.h \
 		../../../wrapper/include/Constants.h \
 		../../../wrapper/include/DMPreview_utility/ColorPaletteGenerator.h \
-		../../../wrapper/include/DMPreview_utility/PlyWriter.h
+		../../../wrapper/include/DMPreview_utility/PlyWriter.h \
+		ui_CTitleBarWidget.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o CTitleBarWidget.o ../../view/CTitleBarWidget.cpp
 
 CWelcomeVideoWidget.o: ../../view/CWelcomeVideoWidget.cpp ../../view/CWelcomeVideoWidget.h
