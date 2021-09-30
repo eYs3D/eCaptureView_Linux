@@ -12,7 +12,7 @@ MAKEFILE      = Makefile
 
 CC            = gcc
 CXX           = g++
-DEFINES       = -DQT_DEPRECATED_WARNINGS -DUAC_X86_SUPPORTED -DVERSION_STRING=\"1.0.12.20210918_alpha\" -DQT_NO_DEBUG -DQT_MULTIMEDIAWIDGETS_LIB -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_DBUS_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB
+DEFINES       = -DQT_DEPRECATED_WARNINGS -DUAC_X86_SUPPORTED -DVERSION_STRING=\"1.0.14.20210928_alpha\" -DQT_NO_DEBUG -DQT_MULTIMEDIAWIDGETS_LIB -DQT_MULTIMEDIA_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_DBUS_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -O2 -std=gnu++11 -Wall -W -Wno-unused-parameter -Wno-reorder -D_REENTRANT -fPIC $(DEFINES)
 INCPATH       = -I../../../DMPreview -I. -I/home/stephan/github/HD-DM-Linux-SDK/DMPreview/model/ -I/home/stephan/github/HD-DM-Linux-SDK/DMPreview/model/module/ -I../../view -I../../controller -I../../manager -I../../utility -I../../utility/sqlite3 -I../../../eSPDI -I../../../wrapper/include -I../../../wrapper/include/DMPreview_utility -I../../../wrapper/include/devices -I../../../wrapper/include/devices/controller -I../../../wrapper/include/devices/model -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtMultimedia -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtDBus -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
@@ -34,8 +34,8 @@ DEL_DIR       = rmdir
 MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
-DISTNAME      = eCapture1.0.12.20210918_alpha
-DISTDIR = /home/stephan/github/HD-DM-Linux-SDK/DMPreview/build_bin/build/.tmp/eCapture1.0.12.20210918_alpha
+DISTNAME      = eCapture1.0.14.20210928_alpha
+DISTDIR = /home/stephan/github/HD-DM-Linux-SDK/DMPreview/build_bin/build/.tmp/eCapture1.0.14.20210928_alpha
 LINK          = g++
 LFLAGS        = -g3 -Wl,-rpath,'$$ORIGIN/../eSPDI' -Wl,-O1 -Wl,-rpath-link,/usr/lib/x86_64-linux-gnu
 LIBS          = $(SUBLIBS) -L/home/stephan/github/HD-DM-Linux-SDK/DMPreview/../wrapper/x86_64/lib/release/ -leys3d -L/home/stephan/github/HD-DM-Linux-SDK/DMPreview/../eSPDI -leSPDI_X86_64 -lrt -lm -ldl -lX11 -ludev -lusb-1.0 -lQt5MultimediaWidgets -lpulse-mainloop-glib -lpulse -lglib-2.0 -lQt5Multimedia -lQt5Widgets -lQt5Gui -lQt5DBus -lQt5Network -lQt5Core -lGL -lpthread 
